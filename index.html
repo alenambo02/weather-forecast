@@ -18,28 +18,27 @@
         <span class="navbar-text">Weather Dashboard</span>
     </nav>
     
-    <main class="container-fluid">
-        <div class="row">
-            <section class="col-3 card-body">
-            <div class="card-text">
-                Search for a city:
-            </div>
-            <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <main id="searchCont" class="container-fluid">
+    <div id="search" class="row">
+        <div class="col-3 card-body">
+            
+            <form id="cityform" class="form-inline">
+                <label for="city-search">Search for a City:</label>
+                <input id="searchForCity" value="insert-city" type="text" class="form-control mr-sm-2" aria-label="Search">
+                <button id="addItemBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
-            </section>
-
+            <div id="weatherDisplayHere" class="city"></div>
         </div>
-
-
-
-
-
+    </div>
     </main>
+
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./assets/script.js"></script>
 
 </body>
 </html>
+
+
