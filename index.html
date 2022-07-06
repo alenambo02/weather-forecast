@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
     
     <link rel="stylesheet" href="./assets/style.css" >
     <title>Document</title>
@@ -24,7 +24,7 @@
              <div class="row col-3 card-body">
                 <form id="cityForm" class="form-inline">
                 <label for="city-search">Search for a City:</label>
-                <input id="cityInput" value="insert-city" type="text" class="form-control mr-sm-2" aria-label="Search">
+                <input id="searchInput" value="insert-city" type="text" class="form-control mr-sm-2" aria-label="Search">
                 <button id="addItemBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
@@ -39,6 +39,10 @@
             <div id="weatherDisplayHere" class="border border-warning row col-8 card-body">  
                 <div>Curent City Weather</div>
                 <div id="weatherBox" class="box2"></div>
+                <!-- <div class="temperature"></div>
+                <div class="humidity"></div>
+                <div class="wind"></div>
+                <div class="uvIndex"></div> -->
             </div>
         </main>
     </div>
@@ -46,7 +50,8 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./assets/script.js"></script>
 
 </body>
