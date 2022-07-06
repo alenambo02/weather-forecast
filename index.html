@@ -18,19 +18,28 @@
         <span class="navbar-text">Weather Dashboard</span>
     </nav>
     
-    <main id="searchCont" class="container-fluid">
-    <div id="search" class="row">
-        <div class="col-3 card-body">
-            
-            <form id="cityform" class="form-inline">
+    <!-- main content on page below -->
+    <div id="searchCont" class="container-fluid">
+        <aside>
+             <div class="row col-3 card-body">
+                <form id="cityform" class="form-inline">
                 <label for="city-search">Search for a City:</label>
                 <input id="searchForCity" value="insert-city" type="text" class="form-control mr-sm-2" aria-label="Search">
                 <button id="addItemBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-            <div id="weatherDisplayHere" class="city"></div>
-        </div>
+                </form>
+            </div>
+        </aside>
+    
+        <main>
+            <div id="fiveDayForecast" class="border border-warning row col-8 card-body">  
+                <div id="weatherDisplayHere" class="boxes">5-Day Forecast:</div>
+            </div>
+            <div id="fiveDayForecast" class="border border-warning row col-8 card-body">  
+                <div id="weatherDisplayHere" class="boxes">Curent City Weather</div>
+            </div>
+        
+        </main>
     </div>
-    </main>
 
 
 
