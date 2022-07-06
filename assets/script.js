@@ -21,8 +21,6 @@ function displayCityWeathers(event) {
         console.log(data.list[2])
         console.log(data.list[3])
         console.log(data.list[4])
-        
-        
     });  
 }
 
