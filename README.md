@@ -7,7 +7,7 @@ Hello, Here you will find a weather dashboard that allows you to search any city
 Challenges: Storing that city previously searched below was a challenge I struggled with. I ended up creating a reverse for loop that stored the last searched city first and so on.
 
 ## Usage
-You may use this page to access information about local storage, how to call on different API's using Javascript and the fetch method. Feel free to reach out to me with ways I can simplify my code or better it! I have included an image reference to the page and a deployed link of the webpage below: ------> https://alenambo02 <------
+You may use this page to access information about local storage, how to call on different API's using Javascript and the fetch method. Feel free to reach out to me with ways I can simplify my code or better it! I have included an image reference to the page and a deployed link of the webpage below: ------> https://alenambo02.github.io/weather-forecast/ <------
 
 ![alt text](./assets/weather%20dashboard.png)
 
@@ -48,3 +48,7 @@ https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch
 Helpful video/tools to understand calling on API's: https://www.youtube.com/watch?v=WZNG8UomjSI&t=1467
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
+And major credits to my teammate: 
+Harshith Manjunatha
+for helping me with storage issues!
+ 
