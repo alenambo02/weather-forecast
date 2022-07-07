@@ -1,8 +1,23 @@
-.forecast-day {
-   
-    margin-top: 30px;
-    
-    
+#fiveDayForecast {
+   background-color: aquamarine; 
+   margin-top: -100px;
+
 
 }
 
+.text-center {
+    text-align: center;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+
+.uviColor {
+    background-color: transparent;
+}
+
+#box2 {
+    border-style:groove;
+    width: 300px;
+    text-align: center;
+}

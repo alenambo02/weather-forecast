@@ -14,30 +14,32 @@
 
 <body>
     <!-- As a heading -->
-    <nav class="navbar navbar-light bg-info">
-        <span class="navbar-text">Weather Dashboard</span>
-    </nav>
+    <header class="navbar navbar-light bg-info">
+        <p class="text-center">Weather Dashboard</p>
+    </header>
     
     <!-- sidebar content on page below -->
-    <div id="searchCont" class="container-fluid">
+    <div id="searchCont" class="container">
         <aside>
              <div class="row col-3 card-body">
                 <form id="cityForm" class="form-inline">
                 <label for="city-search">Search for a City:</label>
-                <input id="searchInput" value="insert-city" type="text" class="form-control mr-sm-2" aria-label="Search">
+                <input id="searchInput" value="" type="text" class="form-control mr-sm-2" aria-label="Search">
                 <button id="addItemBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </aside>
     
         <main>
-            <div id="fiveDayForecast" class="border border-warning row col-8 card-body">  
+            <div id="fiveDayForecast" class="float-right border border-warning row col-8 card-body">  
                 <div>5-Day Forecast:</div>
-                <div id="forecastBox" class="box1 container-fluid column"></div>
+                <div id="forecastBox" class="box1 container-fluid column">
+                    <img src ="http://openweathermap.org/img/wn/02d@2x.png" alt="weather icon" class="w-icon">
+                </div>
                 
 
             </div>
-            <div id="weatherDisplayHere" class="border border-warning row col-8 card-body">  
+            <div id="weatherDisplayHere" class="float-right border border-warning row col-8 card-body ">  
                 <div>Curent City Weather</div>
                 
                 <div id="weatherBox" class="box2"></div>

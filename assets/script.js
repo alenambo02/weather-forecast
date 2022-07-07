@@ -8,6 +8,7 @@ var humidityItem = $(".humidity");
 var windSpeedItem = $(".wind");
 var uvIndexItem = $(".uvIndex");
 
+
 var long;
 var lat;
 
@@ -20,10 +21,14 @@ geoLocation = function (cityName) {
             console.log(response)
             long = response[0].lon
             lat = response[0].lat
+
             fetchWeather();
         })
 
-
+        var searchedCities = JSON.parse(localStorage.cities);
+        searchedCities.push(inputValue)
+        console.log(searchedCities)
+        localStorage.cities = JSON.stringify(searchedCities)
     
 }
 
@@ -32,10 +37,9 @@ geoLocation = function (cityName) {
 $(document).on("click", "#addItemBtn", function (event) {
     event.preventDefault();
     console.log("working")
+    
    
     geoLocation(searchInput.val());
-  
-
 
 });
 
@@ -61,25 +65,28 @@ fetchWeather = function () {
 					var dayname = new Date(value.dt * 1000).toLocaleDateString("en", {
 						weekday: "long",
 					});
-					var icon = value.weather[0].icon;
+					
 					var temp = value.temp.day.toFixed(0);
                     var humidity = value.humidity;
                     var wind = value.wind_speed;
                     var uvi = value.uvi;
-                   
+                    
+    
 
 
-					fday = `<div class="forecast-day">
-
-						<p>${dayname}</p>
-						<p><span class="icon-${icon}" title="${icon}"></span></p>
-						<div class="forecast-day--temp">${temp}<sup>°F</sup></div>
-                        <p><span class="forecast-day--humidity"><text> Humidity: </text>${humidity + "%"}</div>  
-                        <p><span class="forecast-day--wind"><text> Wind Speed: </text>${wind + "MPH" }</div>
-                        <p><span class="forecast-day--uvi"><text> UVI Index: </text>${uvi}</div>
+					fday = `<div id="box2" class="forecast-day">
+                        
+						<p id="box1" >${dayname}</p>
+						<div class="forecast-day-temp">${temp}<sup>°F</sup></div>
+                        <p><span class="forecast-day-humidity"><text> Humidity: </text>${humidity + "%"}</p>  
+                        <p><span class="forecast-day-wind"><text> Wind Speed: </text>${wind + "MPH" }</p>
+                        <p class= "uviColor"><span class="forecast-day-uvi"><text> UVI Index: </text>${uvi}</p>
 					
                         </div>`;
+
 					fiveDayEl[0].insertAdjacentHTML('beforeend', fday);
+
+
 				}
 			});
 		});
@@ -89,10 +96,16 @@ fetchWeather = function () {
 	});       
 };
 
+// function showSearchedCities {
+
+// }
 
 
 
 
+// var iconURL = "http://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png";
+
+// <img${iconURL}></img$>
 // function displayingItemsBox2(temperatureItem, humidityItem, windSpeedItem, uvIndexItem, cityInput) {
 //     var weatherBoxDiv = document.querySelector("#weatherbox");
 
