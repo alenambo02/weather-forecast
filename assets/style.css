@@ -1,7 +1,7 @@
 /* added color to the five day display card */
 #fiveDayForecast {
    background-color: aquamarine;
-   margin-top: -500px;
+   margin-top: -110px;
 }
 /* centers my header text */
 .text-center {
@@ -19,4 +19,13 @@
     border-style:groove;
     width: 300px;
     text-align: center;
+}
+
+.fixButton {
+    margin-left: 70px;
+    margin-top: 15px;
+}
+
+#addItemBtn {
+    margin-top: 10px;
 }

@@ -3,18 +3,30 @@
 ## Description
 Hello, Here you will find a weather dashboard that allows you to search any city and display its current temperature, humidity, wind-speed, and uv index. Right below it, you can access a 5-day weather forecast of the city you have searched. These weather icons will display the date, temperature, humidity, and an icon that matches the current weather for that day.  
 
-Ideas:
 
-Challenges: 
+Challenges: Storing that city previously searched below was a challenge I struggled with. I ended up creating a reverse for loop that stored the last searched city first and so on.
 
 ## Usage
 You may use this page to access information about local storage, how to call on different API's using Javascript and the fetch method. Feel free to reach out to me with ways I can simplify my code or better it! I have included an image reference to the page and a deployed link of the webpage below: ------> https://alenambo02 <------
 
-```alt text
+![alt text](./assets/weather%20dashboard.png)
 
-Also I included a code snippet of how to call on an API using the fetch method below:
+For my code snippet this time, I included my attempt in trying to create a function that gathered all the data so I could use it where I called the api to retrieve it. Feel free to message me and tell me what my problem was in attempting to do it this was, I am a newbie and could use the pointers.
 
-
+However, I was successful in retieving my data but it was not the most efficent startegy.
+```
+function cardValues(value, index) {
+    $("#tempCont").empty()
+    var iconURL = "http://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png";
+    var image = $("<img>").attr("src", iconURL)
+    img.attr("alt", "Weather Icon")
+    var temp = $("<p>").text("Temperature: " + value.temp.day + "F")
+    var humidity = $("<p>").text("Humidity: " +value.humidity + "%")
+    var wind = $("<p>").text("Wind-speed: " +value.wind_speed + "MPH")
+    var uvi = $("<p>").text("UV Index: " + value.uvi)
+    var fiveDayForecast = $("<div>").addClass("border-warning")
+    fiveDayForecast.append(temp, humidity, wind, uvi)
+    }
 ```
 
 ## License 
