@@ -28,7 +28,7 @@ var lat;
 // this function uses geocodingAPI to retrieve city names so that lat & lon coordinates arent required
 geoLocation = function (cityName) {
     $.ajax({
-        url: "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=a332184f8c6ec6a979de62cfa465345f",
+        url: "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=a332184f8c6ec6a979de62cfa465345f",
         method: "GET"
     })
         .then(function(response){
@@ -97,7 +97,7 @@ fetchWeather = function () {
 					
                         </div>`;
 
-					fiveDayEl[0].insertAdjacentHTML('beforeend', fday);
+					fiveDayEl[0].insertAdjacentHTML('beforeend', daysInfo);
 
 
 				}
